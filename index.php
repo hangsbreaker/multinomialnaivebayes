@@ -75,7 +75,7 @@ $res = $cl->predict($newdoc, $cl->classProb, $cl->probabily);
 
 echo 'Dokumen dicari kelasnya: <b>' . $newdoc . '</b><br>' . $cl->stem_step($newdoc) . '<br>';
 echo '<pre>', print_r($res), '</pre>';
-echo '<b><u>Dokumen tersebut termasuk kelas ' . $classlist[array_key_first($res['class'])] . '</u></b>';
+echo '<b><u>Dokumen tersebut termasuk kelas ' . $classlist[$cl->arr_key_first($res['class'])] . '</u></b>';
 
 echo '<br><br><hr>';
 
@@ -85,4 +85,4 @@ $res = $cl->predict($newdoc, $cl->classProb, $cl->probabily);
 
 echo 'Dokumen dicari kelasnya: <b>' . $newdoc . '</b><br>' . $cl->stem_step($newdoc) . '<br>';
 echo '<pre>', print_r($res), '</pre>';
-echo '<b><u>Dokumen tersebut termasuk kelas ' . $classlist[array_key_first($res['class'])] . '</u></b>';
+echo '<b><u>Dokumen tersebut termasuk kelas ' . $classlist[$cl->arr_key_first($res['class'])] . '</u></b>';
